@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+      integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+      crossorigin=""
+    ></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>IP Address Tracker</title>
+  </head>
+  <body>
+    <header>
+      <h1>IP Address Tracker</h1>
+      <div class="inputContainer">
+        <input type="text" placeholder="Enter your domain and IP here" />
+        <button id="btn" onclick="getLocation()">
+          <img src="./images/icon-arrow.svg" alt="icon-arrow" />
+        </button>
+        <div class="details">
+          <div class="details-item">
+            <p>IP Address</p>
+            <h3 id="ip">192.212.174.101</h3>
+          </div>
+          <div class="details-item">
+            <p>Location</p>
+
+            <h3 id="location">Brooklyn, NY</h3>
+          </div>
+          <div class="details-item">
+            <p>TimeZone</p>
+            <h3 id="timezone">UTC - 05:00</h3>
+          </div>
+          <div class="details-item last">
+            <p>ISP</p>
+            <h3 id="isp">Star Link</h3>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div id="map"></div>
+  </body>
+</html>
